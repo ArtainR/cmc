@@ -5,7 +5,7 @@ Developed by Artain using CMT, Iceflower's "Celaria Map Toolkit", along with Ice
 Saying that, if You're gonna bother someone, bother Artain.
 
 ### Disclaimer 
-This tool is fully community created and **is not officially supported, maintained or distributed by Lewa or any affiliates.**
+This tool is fully community created and **is not officially supported, maintained, distributed or affiliated with Lewa ([Celaria's](http://www.celaria.com/) developer) or any affiliates.**
 
 ### Third Party
 #### CMT Copyright and License
