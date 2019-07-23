@@ -84,7 +84,7 @@ class MyGui:
             self.cmap = cmt.convert(self.cmap, self.cmap.format_version + 1, self.cmap.identifier)
         except ValueError as err:
             messagebox.showerror("Converter error", str(err))
-        self.change_limit()
+        self.check_against_limit()
         self.save_button['state'] = "normal"
 
     def downgrade(self):
@@ -92,7 +92,7 @@ class MyGui:
             self.cmap = cmt.convert(self.cmap, self.cmap.format_version - 1, self.cmap.identifier)
         except ValueError as err:
             messagebox.showerror("Converter error", str(err))
-        self.change_limit()
+        self.check_against_limit()
         self.save_button['state'] = "normal"
 
     def check_against_limit(self):
