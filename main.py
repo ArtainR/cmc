@@ -56,10 +56,15 @@ class MyGui:
         cmt.encode(self.cmap, Path(filedialog.asksaveasfilename(initialdir="/", title="Save file", filetypes=(
             ("Celaria map files", "*.cmap"), ("All files", "*.*"))) + ".cmap"))
 
-    def open_file(self):
+        def open_file(self):
         opened_file = filedialog.askopenfilename(initialdir="/", title="Open file",
                                                  filetypes=(("Celaria map files", "*.cmap"), ("All files", "*.*")))
-        self.cmap = cmt.decode(Path(opened_file), False)
+
+		try:
+			self.cmap = cmt.decode(Path(opened_file))
+		except ValueError as err:
+			messagebox.showerror("Decoder error", str(err))
+			return
 
         self.save_button['state'] = "disabled"
 
@@ -73,9 +78,6 @@ class MyGui:
         elif self.cmap.format_version == 0:
             self.downgrade_button['state'] = "disabled"
             self.upgrade_button['state'] = "normal"
-        else:
-            messagebox.showwarning("Critical warning",
-                                   "This .cmap file is corrupted or the version is not supported, proceed with caution.")
 
     def upgrade(self):
         try:
