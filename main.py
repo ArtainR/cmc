@@ -56,7 +56,7 @@ class MyGui:
         cmt.encode(self.cmap, Path(filedialog.asksaveasfilename(initialdir="/", title="Save file", filetypes=(
             ("Celaria map files", "*.cmap"), ("All files", "*.*"))) + ".cmap"))
 
-        def open_file(self):
+    def open_file(self):
         opened_file = filedialog.askopenfilename(initialdir="/", title="Open file",
                                                  filetypes=(("Celaria map files", "*.cmap"), ("All files", "*.*")))
 
