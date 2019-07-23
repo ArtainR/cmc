@@ -35,16 +35,16 @@ class MyGui:
 
         # Labels
 
-        self.name_label = Label(root, text="Map name:", height=1) #self.cmap.name
+        self.name_label = Label(root, text="Map name:", height=1)  # self.cmap.name
         self.name_label.place(x=15, y=15)
 
-        self.sun_rotation_label = Label(root, text="Sun rotation:", height=1) #self.cmap.sun_rotation
+        self.sun_rotation_label = Label(root, text="Sun rotation:", height=1)  # self.cmap.sun_rotation
         self.sun_rotation_label.place(x=15, y=40)
 
-        self.sun_angle_label = Label(root, text="Sun angle:", height=1) #self.cmap.sun_angle
+        self.sun_angle_label = Label(root, text="Sun angle:", height=1)  # self.cmap.sun_angle
         self.sun_angle_label.place(x=15, y=65)
 
-        self.version_label = Label(root, height=1, text="Map version:") #self.cmap.format_version
+        self.version_label = Label(root, height=1, text="Map version:")  # self.cmap.format_version
         self.version_label.place(x=15, y=90)
         self.version_label_changing = Label(root, height=1, text="No map loaded")
         self.version_label_changing.place(x=85, y=90)
@@ -117,9 +117,10 @@ class MyGui:
             if float(self.sun_rotation_entry_var.get()):
                 self.cmap.sun_angle = float(self.sun_rotation_entry_var.get()) % 360
         except ValueError:
-            messagebox.showerror("Value error", "The sun angle must be set as a degree (float) value, such as 0.0000 or 1.234567")
+            messagebox.showerror("Value error",
+                                 "The sun angle must be set as a degree (float) value, such as 0.0000 or 1.234567")
             self.sun_rotation_entry_var.set(self.cmap.sun_angle)
-        print("lol1"
+
     def change_sun_angle(self):
         self.cmap.sun_angle = self.sun_angle_entry_var.get()
         self.save_button['state'] = "normal"
@@ -127,7 +128,8 @@ class MyGui:
             if float(self.sun_angle_entry_var.get()):
                 self.cmap.sun_angle = float(self.sun_angle_entry_var.get()) % 360
         except ValueError:
-            messagebox.showerror("Value error", "The sun angle must be set as a degree (float) value, such as 0.0000 or 1.234567")
+            messagebox.showerror("Value error",
+                                 "The sun angle must be set as a degree (float) value, such as 0.0000 or 1.234567")
 
     def upgrade(self):
         try:
@@ -153,5 +155,6 @@ class MyGui:
             self.upgrade_button['state'] = "normal"
             self.downgrade_button['state'] = "disabled"
         self.version_label_changing['text'] = self.cmap.format_version
+
 
 MyGui()
