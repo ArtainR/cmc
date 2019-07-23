@@ -1,4 +1,4 @@
-# CMC - Celaria Map Converter
+# CMIE - Celaria Map Info Editor
 
 ### Info
 Developed by Artain using CMT, Iceflower's "Celaria Map Toolkit", along with Iceflower's help.
