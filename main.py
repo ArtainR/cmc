@@ -93,7 +93,7 @@ class MyGui:
         self.change_limit()
         self.save_button['state'] = "normal"
 
-    def change_limit(self):
+    def check_against_limit(self):
         if self.cmap.format_version == 1:
             self.downgrade_button['state'] = "normal"
             self.upgrade_button['state'] = "disabled"
