@@ -13,7 +13,7 @@ This tool is fully community created and **is not officially supported, maintain
 - https://github.com/IceflowRE/cmt
 - [MIT](https://github.com/IceflowRE/cmt/blob/master/License.rst)
 
-### CMC Copyright and License
+### CMIE Copyright and License
 Copyright (C) 2019-Present  Artain
 
 This program is free software: you can redistribute it and/or modify
