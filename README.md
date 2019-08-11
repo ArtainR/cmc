@@ -7,6 +7,9 @@ Saying that, if You're gonna bother someone, bother Artain.
 ### Disclaimer 
 This tool is fully community created and **is not officially supported, maintained, distributed or affiliated with Lewa ([Celaria's](http://www.celaria.com/) developer) or any affiliates.**
 
+### Warning
+The developer of this tool takes no responsibility for bad, corrupted or lost files.
+
 ### Third Party
 #### CMT Copyright and License
 - [Iceflower](https://github.com/IceflowRE/)
